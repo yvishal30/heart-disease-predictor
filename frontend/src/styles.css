@@ -1,0 +1,130 @@
+/* Center the entire page */
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f9fafb, #fee2e2);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card container with border & shadow */
+.card {
+  background-color: white;
+  padding: 30px 40px;
+  border: 2px solid #f87171; /* Rose-400 shade */
+  box-shadow: 0 8px 15px rgba(248, 113, 113, 0.3);
+  border-radius: 15px;
+  width: 400px;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Title styling */
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #b91c1c; /* Rose-700 */
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Form grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Input wrapper for icon positioning */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Input styling */
+.input-field {
+  width: 100%;
+  padding: 10px 35px 10px 12px;
+  border: 2px solid #f87171;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(255, 0, 0, 0.1);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #dc2626; /* Rose-600 */
+  outline: none;
+  box-shadow: 0 0 5px #dc2626;
+}
+
+/* Icons inside inputs using background images or inline SVG */
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Example icons with SVG data URIs or font icons (you can replace these) */
+.icon-age {
+  background: url('data:image/svg+xml;utf8,<svg fill="red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-cholesterol {
+  background: url('data:image/svg+xml;utf8,<svg fill="red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3a5.5 5.5 0 0 1 4.5 9.5A5.5 5.5 0 0 1 16.5 3C19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54z"/></svg>') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-bloodPressure {
+  background: url('data:image/svg+xml;utf8,<svg fill="red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0-2a7 7 0 1 1-7 7 7 7 0 0 1 7-7z"/></svg>') no-repeat center center;
+  background-size: contain;
+}
+
+/* Predict button styling */
+.predict-btn {
+  grid-column: span 2;
+  margin-top: 15px;
+  background-color: #ef4444; /* Red-500 */
+  color: white;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.5);
+}
+
+.predict-btn:hover {
+  background-color: #dc2626; /* Red-600 */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(220, 38, 38, 0.7);
+}
+
+/* Prediction result */
+.prediction-result {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #b91c1c; /* Rose-700 */
+  animation: bounce 1s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+}
